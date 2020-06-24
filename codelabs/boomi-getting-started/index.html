@@ -28,7 +28,8 @@
                   feedback-link="">
     
       <google-codelab-step label="🤓 What you&#39;ll learn" duration="2">
-        <p>In this tutorial, you will learn how to configure and use the Solace Boomi connector. This is done in 4 easy steps</p>
+        <p class="image-container"><img alt="Boomi Logo" title="Boomi Logo" src="img/4213b326f2fca64b.png"></p>
+<p>In this tutorial, you will learn how to configure and use the Solace Boomi connector. This is done in 4 easy steps</p>
 <ol type="1">
 <li>Configure your Solace PubSub+ Event Broker (Hardware, Software, SasS)</li>
 <li>Setup your Boomi platform</li>
@@ -70,8 +71,54 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="📌 Setup Boomi Platfrom" duration="7">
-        
+      <google-codelab-step label="📌 Setup Boomi Platform" duration="20">
+        <h2 is-upgraded>Core concepts</h2>
+<p>Boomi builds, deploys and manage all the processes in a concept called <strong>Atoms</strong>, which is a lightweight Java application that is deployed on a host with Internet access. This of it as your single-tenant, single-node runtime engine. There are two deployment models for Atoms:</p>
+<ol type="1">
+<li>In-the-cloud deployment (using Boomi Atom Cloud)</li>
+<li>On-premise deployment (using local Atom setup)</li>
+</ol>
+<aside class="special"><p>The Boomi Atom is a lightweight, dynamic runtime engine. Once your integration processes have been deployed to your Atom, the Atom contains all the components required to execute your processes from end to end, including connectors, transformation rules, decision handling, and processing logic.</p>
+</aside>
+<p class="image-container"><img alt="Atom gif" title="Atom gif" src="img/e895a357cad149dd.gif"></p>
+<h2 is-upgraded>Create a Boomi trial account</h2>
+<p>if you dont have an account, navigate to <a href="https://boomi.com/form/trial/" target="_blank">https://boomi.com/form/trial/</a> and sign up for a free account</p>
+<p>After you sign up for a Boomi platform account and login, you will have access to the Boomi AtomSphere platform - your one stop shop for all your integrations</p>
+<p class="image-container"><img alt="AtomSphere" title="AtomSphere" src="img/68bd3fae589cfdea.png"></p>
+<p class="image-container"><img alt="menu" title="menu" src="img/f9510a090bddc95e.png"></p>
+<ul>
+<li>Build: This is where you design and package your process (i.e. architecture)</li>
+<li>Deploy: This is where you deploy the packaged process in your Atom for execution</li>
+<li>Manage: This is where you configure your environment and Atoms</li>
+</ul>
+<h2 is-upgraded>Configure a local Atom</h2>
+<p>In this tutorial, we will be setting up a local Atom. Either follow the steps below or navigate to the links below for more information</p>
+<ol type="1">
+<li><a href="https://help.boomi.com/bundle/integration/page/t-atm-Installing_a_local_Atom_on_Windows_beec31b0-477d-430b-a744-cedb3a8d67eb.html" target="_blank">Windows Machine</a>.</li>
+<li><a href="https://help.boomi.com/bundle/integration/page/t-atm-Using_Docker_to_install_a_local_Atom_on_Linux_b54f0e8c-c02c-4eea-87f5-7233d1c5e0a5.html" target="_blank">Using Docker</a>.</li>
+</ol>
+<p>👉 Navigate to the <strong>Manage</strong> tab and click on <strong>Atom Management</strong></p>
+<p class="image-container"><img alt="manage" title="manage" src="img/d980c9704ab58742.png"></p>
+<p>👉 Click on <strong>+New</strong> and choose <strong>Atom</strong></p>
+<p class="image-container"><img alt="new-atom" title="new-atom" src="img/598686ef93a04e84.png"></p>
+<p>👉 Choose the operating system of choice in the <strong>Atom Setup</strong> box</p>
+<p class="image-container"><img alt="atom-setup" title="atom-setup" src="img/6a176c3502dcacb2.png"></p>
+<h2 is-upgraded>Notes on Docker installation</h2>
+<p>The installer is a shell script that you run locally and automatically configure your docker setup</p>
+<ol type="1">
+<li><code>./atomdocker_install64.sh -h</code> for more information on how to run it</li>
+<li>You can generate a token by clicking on <strong>Generate Token</strong> under <strong>Security Options</strong></li>
+<li>Use the generated token as follows <code>./atomdocker_install64.sh -n &lt;docker_container_name&gt; -k &lt;isnert_token&gt;</code></li>
+<li>Create a <code>/var/boomi</code> directory because the script assumes it already exists and make sure its owned by the current user  <ol type="1">
+<li>Navigate to <code>/var/boomi/</code> after you create it</li>
+<li>Execute the following from terminal <code>chown $USER .</code></li>
+<li>Make sure this directory is shared on docker. This is done by opening the docker preferences and adding it under <strong>File Shareing Resources</strong> tab</li>
+</ol>
+</li>
+</ol>
+<p class="image-container"><img alt="docker-menu" title="docker-menu" src="img/118033f661ce0a8d.png"><img alt="docker-sharing" title="docker-sharing" src="img/4a0826b270a031d0.png"></p>
+<p>Viola! Now you have your Solace and Boomi environment setup</p>
+
 
       </google-codelab-step>
     
@@ -86,6 +133,11 @@
       </google-codelab-step>
     
       <google-codelab-step label="Connect Everything!" duration="7">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Bonus: Add more publishers" duration="7">
         
 
       </google-codelab-step>
