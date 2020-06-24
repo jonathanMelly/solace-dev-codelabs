@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>Getting Started with Boomi</title>
+  <title>Boomi featuring Solace</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,28 +23,69 @@
   <google-codelab-analytics gaid="UA-3921398-10"></google-codelab-analytics>
   <google-codelab codelab-gaid="UA-3921398-10"
                   id="boomi-getting-started"
-                  title="Getting Started with Boomi"
+                  title="Boomi featuring Solace"
                   environment="web"
                   feedback-link="">
     
-      <google-codelab-step label="What you&#39;ll learn" duration="5">
-        <p>This codelab will cover the basics on what you need to get started with the Solace PubSub+ Connecter process library</p>
-<aside class="warning"><p>This will appear in a yellow info box.</p>
+      <google-codelab-step label="🤓 What you&#39;ll learn" duration="2">
+        <p>In this tutorial, you will learn how to configure and use the Solace Boomi connector. This is done in 4 easy steps</p>
+<ol type="1">
+<li>Configure your Solace PubSub+ Event Broker (Hardware, Software, SasS)</li>
+<li>Setup your Boomi platform</li>
+<li>Configure the Solace connector in the Boomi platform</li>
+<li>Send/Receive messages between Boomi and Solace</li>
+</ol>
+<aside class="special"><p>Note that this tutorial is meant to be platform and programming language agnostic. Meaning that regardless what operating system you are running (Mac, Linux, Windows), programming languages or messaging AIPs you choose to use, the setup will be the same.</p>
 </aside>
-<aside class="special"><p>This will appear in a green info box.</p>
-</aside>
-<p>Add an image! <img alt="Soly Image Caption" src="img/f3045cf027293e9e.gif"></p>
+<h2 is-upgraded>Prerequisite</h2>
+<p>This tutorial assumes:</p>
+<ul>
+<li>MacOS/Linux users have knowledge using Docker</li>
+<li>Access to a Solace broker (explained in Step 2)</li>
+<li>Access to a Boomi environment (explained in Step 3)</li>
+</ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="What you need: Prerequisite" duration="7">
-        <p>Enter environment setup &amp; prerequisites here</p>
+      <google-codelab-step label="📌 Setup a Solace PubSub&#43; Broker" duration="5">
+        <p>Access to a Solace messaging service, Solace PubSub+, can be achieved in either one of the three flavours</p>
+<ol type="1">
+<li>Hardware Appliance</li>
+<li>Software broker image (Docker, Virtual image)</li>
+<li>Solace Cloud service instance</li>
+</ol>
+<p>This tutorial will walk you through setting up a Solace Cloud service instance. If you are interested in setting up a local broker running on Docker or a virtual machine check out the <a href="https://docs.solace.com/Solace-SW-Broker-Set-Up/SW-Broker-Image-Setup.htm" target="_blank">PubSub+ Event  Broker: Software</a> documentation</p>
+<h2 is-upgraded>Sign up for free Solace Cloud account</h2>
+<p>Navigate to the <a href="https://console.solace.cloud/login/new-account" target="_blank">Create a New Account</a> page and fill out the required information. No credit card required!</p>
+<h2 is-upgraded>Create a messaging service</h2>
+<p>After you create your Solace Cloud account and sign in to the Solace Cloud Console, you&#39;ll be routed to the event mesh page.</p>
+<p class="image-container"><img alt="Solace Cloud Event Mesh Page" title="Solace Cloud Event Mesh" src="img/500ee282af1b6d9f.png"></p>
+<p>Click on ‘Messaging Services&#39; and all the messaging services associated with your account will show up if you have any already created. To create a new service, click either button as depicted in the image below:</p>
+<p class="image-container"><img alt="Solace Cloud Landing Page" title="Solace Cloud Landing Page" src="img/a7ea4d393008a8c3.png"></p>
+<p>Fill out all the details for your messaging service, and then click &#34;Create&#34; at the bottom of the page.</p>
+<p class="image-container"><img alt="Create Solace Cloud Messaging Service" title="Solace Cloud Messaging Service" src="img/b2fd05043df1c5cd.png"></p>
+<p>Your service should be ready to use in a couple seconds! 🌪</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Custom Step 1" duration="0">
+      <google-codelab-step label="📌 Setup Boomi Platfrom" duration="7">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="🛠 Configure Solace Broker" duration="7">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="🛠 Setup Solace connector in Boomi" duration="7">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Connect Everything!" duration="7">
         
 
       </google-codelab-step>
